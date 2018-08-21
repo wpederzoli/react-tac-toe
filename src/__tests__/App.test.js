@@ -7,6 +7,7 @@ describe('App container', () =>{
     it('should have a black background', () =>{
         expect(wrapper.find('#app-container').prop('style')).toHaveProperty('backgroundColor', '#000');
     });
-    // it('should contain a game component');
-    // it('should have a restart button');
+    it('should contain a game component', () =>{
+        expect(wrapper.exists('GameComponent')).toBeTruthy();
+    });
 });

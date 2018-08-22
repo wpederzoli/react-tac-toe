@@ -1,9 +1,9 @@
 import React from 'react';
 import GameComponent from './Components/GameComponent';
 
-const App = () =>{
-    return(
-        <div id='app-container'style={styles.appContainer}>
+const App = () => {
+    return (
+        <div id="app-container" style={styles.appContainer}>
             <GameComponent />
         </div>
     );
@@ -11,8 +11,8 @@ const App = () =>{
 
 const styles = {
     appContainer: {
-        backgroundColor: '#000'
-    }
+        backgroundColor: '#000',
+    },
 };
 
 export default App;

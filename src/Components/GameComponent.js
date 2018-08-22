@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-class GameComponent extends Component{
-    constructor(props){
+class GameComponent extends Component {
+    constructor(props) {
         super(props);
     }
 
-    render(){
-        return(
-            <div>GameComponent</div>
-        );
+    render() {
+        return <div>GameComponent</div>;
     }
 }
 

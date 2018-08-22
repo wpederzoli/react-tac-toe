@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import StartButton from './StartButton';
-import RestartButton from './RestartButton';
+import Button from './Button';
 import GamePanel from './GamePanel';
+import ScoreBoard from './ScoreBoard';
 
 class GameComponent extends Component {
     constructor(props) {
@@ -12,9 +12,10 @@ class GameComponent extends Component {
     render() {
         return (
             <div>
+                <ScoreBoard />
                 <GamePanel />
-                <StartButton />
-                <RestartButton />
+                <Button label="Start" />
+                <Button label="Restart" />
             </div>
         );
     }

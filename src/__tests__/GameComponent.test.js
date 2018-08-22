@@ -7,14 +7,28 @@ describe('Game Component ', () => {
         const wrapper = shallow(<GameComponent />);
 
         it('has a start button', () => {
-            expect(wrapper.exists('StartButton')).toBeTruthy();
+            let component = shallow(<GameComponent label="Start" />);
+            expect(
+                component
+                    .find('Button')
+                    .at(0)
+                    .prop('label')
+            ).toEqual('Start');
         });
         it('has a game panel', () => {
             expect(wrapper.exists('GamePanel')).toBeTruthy();
         });
         it('has a restart button', () => {
-            expect(wrapper.exists('RestartButton')).toBeTruthy();
+            let component = shallow(<GameComponent label="Restart" />);
+            expect(
+                component
+                    .find('Button')
+                    .at(1)
+                    .prop('label')
+            ).toEqual('Restart');
         });
-        // it('shows the scores');
+        it('shows the scores', () => {
+            expect(wrapper.exists('ScoreBoard')).toBeTruthy();
+        });
     });
 });
